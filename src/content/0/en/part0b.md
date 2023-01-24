@@ -437,6 +437,10 @@ So, the browser reloads the Notes page. The reload causes three more HTTP reques
 
 The network tab also shows the data submitted with the form:
 
+**note:** `form data is sent with HTTP POST`
+
+So, in our case, the user entered text *form data is sent with HTTP POST* into the form's input text field.
+
 NB: On newer Chrome, the Form Data dropdown is within the new Payload tab, located to the right of the Headers tab.
 
 ![form data dropdown in developer tools](../../images/0/23e.png)
@@ -445,7 +449,7 @@ The Form tag has attributes <i>action</i> and <i>method</i>, which define that s
 
 ![action and method highlight](../../images/0/24e.png)
 
-The code on the server responsible for the POST request is quite simple (NB: this code is on the server, and not on the JavaScript code fetched by the browser):
+The code on the server responsible for the POST request is quite simple (NB: this code is on the server, and not in the JavaScript code fetched by the browser):
 
 ```js
 app.post('/new_note', (req, res) => {
